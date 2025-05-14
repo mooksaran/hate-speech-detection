@@ -66,6 +66,9 @@ https://www.kaggle.com/datasets/mrmorj/hate-speech-and-offensive-language-datase
 ## 🚀 Run on Streamlit (optional)
 streamlit run src/TermProject.py
 
+## 📸 App Preview
+![Streamlit App Screenshot](assets/streamlit_preview.png)
+
 ## 🧪 Run with Jupyter
 jupyter notebook notebooks/HateSpeechDetectionWithBert.ipynb
 
@@ -74,10 +77,6 @@ Confusion matrix, F1-score, real-time predictions, and warnings for flagged text
 📄 Reports
 
 Find detailed methodology in /reports/ including proposal, slides, and final report.
-## 👩‍💻 Authors
-San Myint Hlaing 
-Saranya Sangsuk-iem 
->>>>>>> 28816eea231369623708d349c62ec0fa5ad20e73
 
 Available in `data/`:
 - labeled_data.csv
@@ -102,8 +101,8 @@ Available in `reports/`:
 
 Authors
 -------
-- San Myint Hlaing (6238133)
-- Saranya Sangsuk-iem (6237407)
+- San Myint Hlaing 
+- Saranya Sangsuk-iem 
 
 License
 -------
