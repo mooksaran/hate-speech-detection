@@ -9,6 +9,7 @@ import seaborn as sns
 
 # Load model and tokenizer
 import tensorflow_hub as hub
+from transformers import BertTokenizer
 from tensorflow.keras.models import load_model
 
 @st.cache_resource
@@ -28,6 +29,7 @@ st.write("Enter text below to check if it's hate speech:")
 user_input = st.text_area("Input text", height=150)
 
 # Prediction
+model, tokenizer = load()
 if st.button("Predict"):
     if user_input.strip() == "":
         st.warning("Please enter some text.")

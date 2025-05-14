@@ -1,24 +1,8 @@
-# Core libraries
-streamlit
-tensorflow
-transformers
-numpy
+streamlit==1.34.0
+tensorflow==2.11.0
+tensorflow_hub==0.14.0
+transformers==4.30.2
 pandas
+numpy
 matplotlib
 seaborn
-
-# Deep Learning
-tensorflow==2.11.0
-keras
-
-# NLP & BERT
-transformers==4.30.2
-sentencepiece
-
-# Visualization and interface
-streamlit
-jupyter
-
-# Optional (for cleaning text)
-regex
-nltk
