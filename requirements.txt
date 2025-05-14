@@ -1,0 +1,22 @@
+# Core libraries
+numpy
+pandas
+matplotlib
+seaborn
+scikit-learn
+
+# Deep Learning
+tensorflow==2.11.0
+keras
+
+# NLP & BERT
+transformers==4.30.2
+sentencepiece
+
+# Visualization and interface
+streamlit
+jupyter
+
+# Optional (for cleaning text)
+regex
+nltk

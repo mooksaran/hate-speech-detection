@@ -1,0 +1,51 @@
+# Ignore Python cache and environment files
+__pycache__/
+*.py[cod]
+*.so
+*.egg
+*.egg-info/
+dist/
+build/
+
+# Ignore Jupyter Notebook checkpoints
+.ipynb_checkpoints/
+
+# Ignore virtual environment folders
+env/
+venv/
+.venv/
+
+# Ignore system files
+.DS_Store
+Thumbs.db
+
+# Ignore log files and temporary files
+*.log
+*.tmp
+*.bak
+*.swp
+
+# Ignore model weights (too large for GitHub)
+*.h5
+*.hdf5
+*.ckpt
+
+# Ignore models folder if you want to exclude all large models
+models/
+
+# Ignore dataset backups or external raw files
+*.zip
+*.rar
+*.tar
+*.tar.gz
+*.7z
+
+# VSCode or PyCharm project settings
+.vscode/
+.idea/
+
+# Notebook metadata (optional)
+*.nbconvert.ipynb
+
+# Ignore Streamlit app state
+.streamlit/
