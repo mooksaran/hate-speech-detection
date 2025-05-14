@@ -67,7 +67,7 @@ https://www.kaggle.com/datasets/mrmorj/hate-speech-and-offensive-language-datase
 streamlit run src/TermProject.py
 
 ## 📸 App Preview
-![Streamlit App Screenshot](assets/streamlit_preview.png)
+![Streamlit App Screenshot](assets/streamlit-preview.png)
 
 ## 🧪 Run with Jupyter
 jupyter notebook notebooks/HateSpeechDetectionWithBert.ipynb
