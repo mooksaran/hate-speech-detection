@@ -8,17 +8,26 @@ import matplotlib.pyplot as plt
 import seaborn as sns
 
 # Load model and tokenizer
+import tensorflow as tf
 import tensorflow_hub as hub
 from transformers import BertTokenizer
-from tensorflow.keras.models import load_model
 
 @st.cache_resource
 def load():
-    model = load_model("models/BERT_HateSpeechDetection.h5", 
-                       custom_objects={'KerasLayer': hub.KerasLayer},
-                       compile=False)
+    # โหลด BERT preprocessing และ encoder จาก TF Hub
+    preprocess = hub.KerasLayer("https://tfhub.dev/tensorflow/bert_en_uncased_preprocess/3")
+    encoder = hub.KerasLayer("https://tfhub.dev/tensorflow/bert_en_uncased_L-12_H-768_A-12/4")
+
+    # สร้างโมเดลใหม่ (ย่อ)
+    text_input = tf.keras.layers.Input(shape=(), dtype=tf.string)
+    encoder_inputs = preprocess(text_input)
+    outputs = encoder(encoder_inputs)['pooled_output']
+    outputs = tf.keras.layers.Dense(3, activation='softmax')(outputs)
+    model = tf.keras.Model(inputs=text_input, outputs=outputs)
+
     tokenizer = BertTokenizer.from_pretrained("bert-base-uncased")
     return model, tokenizer
+
 
 
 # Title
